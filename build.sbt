@@ -101,6 +101,12 @@ lazy val `circe-demo` = (project in file("circe"))
     libraryDependencies ++= Seq(circe, `circe-parser`, `circe-generic`)
   )
 
+lazy val `sight-demo` = (project in file("sight-dotty"))
+  .settings(
+    scalaVersion := tastyReaderVersion,
+    name := "tasty-example-project-sight",
+    libraryDependencies += "io.github.ashwinbhaskar" % "sight-client_0.23" % "0.1.1"
+  )
 
 lazy val root = (project in file("."))
   .aggregate(`zio-demo`)
